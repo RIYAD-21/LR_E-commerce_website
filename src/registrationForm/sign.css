@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+body{
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    display: flex;
+    height: 100vh;
+}
+.logIn_side1{
+    width:60%;
+    background-color: rgba(244, 117, 88, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+._form{
+    width: 50%;
+    min-height: 60vh;
+    padding: 25px;
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    letter-spacing: 2px;
+}
+._form form{
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+._form form label{
+    font-size:1.8vh;
+    margin-top: 10px;
+}
+._form h1{
+    font-size: 5vh;
+    margin-bottom: 20px;
+    color:rgba(244, 116, 88, 1);
+}
+._form h6{
+    color: rgb(150, 150, 150);
+    font-size: 1.2vh;
+    margin-top: 10px;
+    font-weight: 400;
+    letter-spacing: 3px;
+}
+._form p{
+    justify-self: center;
+    font-size: 1.5vh;
+    margin-top: 10px;
+    color: rgb(150, 150, 150);
+    font-weight: 400;
+}
+._form p a{
+    text-decoration: none;
+    color: rgba(244, 116, 88, 1);
+    font-size: 1.5vh;
+    margin-top: 10px;
+    font-weight: 500;
+}
+._form p a:hover{
+    text-decoration: underline;
+}
+._form button{
+    margin: 4vh 0;
+    min-width: 30%;
+    height: 50px;
+    align-self: center;
+    padding: 10px;
+    background-color: rgba(244, 116, 88, 1);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+._form button:hover{
+    background-color: rgb(239, 93, 61);
+    box-shadow: 0px 0px 5px rgba(222, 41, 0, 0.866), 0px 0px 2px rgb(255, 47, 0);
+}
+._form form input{
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1.8vh;
+    transition: all 0.4s ease;
+    letter-spacing:0;
+}
+._form form input:focus{
+    outline: none;
+    border-color: rgba(244, 116, 88, 1);
+    background-color: rgba(244, 117, 88, 0.20);
+}
+.logIn_side2{
+    width:40%;
+    background-color: rgba(244, 117, 88, 0.74);
+}
+.logIn_image{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.logIn_image img{
+    width: 100%;
+    object-fit: contain;
+    border-radius: 0 10px 10px 0;
+}
+.registration_side1{
+    width:60%;
+    background-color: rgba(244, 117, 88, 0.05);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.registration_side2{
+    width:40%;
+    background-color: rgba(244, 117, 88, 0.74);
+}
+.registration_image{
+    height: 96vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+.registration_image img{
+    height: 65%;
+    width: 60%;
+    object-fit: contain;
+    border-radius: 0 10px 10px 0;
+}

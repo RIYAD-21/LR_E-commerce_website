@@ -5,17 +5,14 @@ import Footer from "./footer"
 import AdsSpace from "./homePageComp/AdsSpace.jsx"
 import LogIn from "./registrationForm/LogIn.jsx"
 import Register from "./registrationForm/Register.jsx"
+import NavBar2 from "./productDetail/NavBar2.jsx"
 import React from 'react'
 
 function App() {
 
   return (
     <>
-      <NavBar1 />
-      <HomePage />
-      <ProductContainer />
-      <AdsSpace />
-      <Footer /> 
+      <NavBar2 />
     </>
   )
 }

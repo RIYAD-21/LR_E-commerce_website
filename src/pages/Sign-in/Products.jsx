@@ -30,7 +30,25 @@ function Products(){
                 rating: 4,
                 sales: "1,5K",
                 image: computer,
-            }
+            },
+        {
+            id: 1,
+            name: "computer I7",
+            category: "Electronics",
+            price: "600$",
+            rating: 4,
+            sales: "1,5K",
+            image: computer,
+        },
+        {
+            id: 1,
+            name: "computer I7",
+            category: "Electronics",
+            price: "600$",
+            rating: 4,
+            sales: "1,5K",
+            image: computer,
+        },
         ]
 
 

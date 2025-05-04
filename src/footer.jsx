@@ -58,7 +58,7 @@ export default function Footer() {
             </div>
             <br />
             <div className="footer-bottom">
-                <a href=""><span>&#169;</span> 2025 LR E-commerce websit</a>
+                <a href=""><span>&#169;</span> 2025 LR E-commerce website</a>
                 <a href="">All rights reserved</a>
             </div>
         </div>

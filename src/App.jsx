@@ -10,13 +10,14 @@ import React from 'react'
 import SignIn from "./pages/Sign-in/Sign-in.jsx";
 import SideBar from "./pages/Sign-in/Side-bar.jsx";
 import Products from "./pages/Sign-in/Products.jsx";
+import Card from "./pages/Card/card.jsx";
 
 function App() {
 
   return (
     <>
         <NavBar2/>
-        <SignIn/>
+        <Card/>
         <div className="container">
             <SideBar/>
             <Products/>

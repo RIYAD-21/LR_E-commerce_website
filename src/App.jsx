@@ -17,8 +17,11 @@ function App() {
     <>
         <NavBar2/>
         <SignIn/>
-        <SideBar/>
-        <Products/>
+        <div className="container">
+            <SideBar/>
+            <Products/>
+        </div>
+
     </>
   )
 }

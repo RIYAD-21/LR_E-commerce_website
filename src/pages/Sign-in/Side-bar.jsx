@@ -12,7 +12,7 @@ function SideBar(){
             <input type={"range"} className={".range-slider"} min={"0"} max={"100"}/>
 
             <label>Stars:</label>
-            <input type={"range"} className={".range-slider"} min={"0"} max={"100"}/>
+            <input type={"range"} className={".range-slider"} min={"1"} max={"5"}/>
 
             <button className="search-button" >
                 search

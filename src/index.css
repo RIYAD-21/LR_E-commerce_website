@@ -337,3 +337,8 @@ body{
   font-weight: 700;
   font-size: 1.5vh;
 }
+
+
+.container{
+  display: flex;
+}

@@ -1,0 +1,33 @@
+
+
+body{
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+}
+.searchBar__input2{
+    width: 105vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50px;
+    padding: 2px;
+    border:black 1px solid;
+  }
+  .searchBar__input2 input{
+    width:90%;
+    padding: 10px;
+    font-size: 1.6vh;
+    border: none;
+    outline: none;
+    background-color: transparent;
+  }
+  .searchBar__input2 button{
+    width:7vh;
+    height: 4vh;
+    background-color: rgba(65, 65, 65, 0.593);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+  }

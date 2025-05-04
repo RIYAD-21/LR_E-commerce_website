@@ -1,10 +1,12 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 body{
     margin: 0;
     width: 100%;
     height: 100vh;
+    font-family: 'Poppins', sans-serif;
 }
+/*Navigation bar */
 .searchBar__input2{
     width: 105vh;
     display: flex;
@@ -31,3 +33,68 @@ body{
     border-radius: 50px;
     cursor: pointer;
   }
+  /*product detail*/
+.productView_container{
+  display: flex;
+  justify-content: space-evenly;
+  width: 90%;
+  height: 70vh;
+  margin: 8vh 0 0 8vh;
+}
+.miniImaes{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: end;
+  width: 15vh;
+  height: 90%;
+}
+.miniImaes img{
+  width: 13vh;
+  height: 13vh;
+  object-fit: cover;
+  border-radius:15px;
+  cursor: pointer; 
+  box-shadow: 0 0 5px #5d5d5d;
+  transition: all 0.3s ease-in-out;
+}
+.miniImaes img:hover{
+  transform: scale(1.2);
+  box-shadow: 0 0 2px #5d5d5d, 0 0 10px #5d5d5d;
+}
+.mainImage{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width:35%;
+  height: 90%;
+  background-color: rgb(0, 0, 0);
+  border-radius:15px;
+  border:black 1px solid ;
+}
+.mainImage img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.productInfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
+  width: 40%;
+  height: 90%;
+  margin: 0 0 0 5vh;
+}
+.productInfo h1{
+  font-size: 4vh;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 10px #d7c600;
+}
+.productInfo p[id="desc"]{
+  font-size: 2vh;
+  color: rgb(255, 255, 255);
+  text-shadow: 0 0 10px #d7c600;
+}
+.productInfo h1 p[id="desc"]{
+}

@@ -13,7 +13,7 @@ export default function ProductContainer() {
               <span>Categorie</span>
             </div>
 						<p id="Psales">14k sales</p>
-						<div>Stars</div>
+						<div>⭐⭐⭐⭐⭐</div>
 						<button><FaCartShopping size="1.5em" color="black" /></button>
 				</div>
 			</>

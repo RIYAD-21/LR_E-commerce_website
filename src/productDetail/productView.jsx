@@ -16,43 +16,46 @@ export default function ProductView(){
                 </div>
                 <div className="productInfo">
                     <h1>Product Name</h1>
-                    <p id='desc'>Product description goes here. It should be detailed and informative.</p>
+                    <p id='desc'>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
+                        Eligendi esse consectetur, quos minus excepturi quis nihil, doloremque 
+                        hic minima vitae ea repellendus autem provident beatae aliquam quasi perspiciatis et. 
+                        Expedita.
+                    </p>
                     <div className="rating">
                         <span>⭐⭐⭐⭐⭐</span>
-                        <p>(100 reviews)</p>
-                        <p>In Stock</p>
+                        <p id="reviews">(100 reviews)</p>
+                        <p id='disponibility'>In Stock</p>
                     </div>
                     <div className="price">
                         <span>$99.99</span>
                     </div>
-                    <hr />
-                    <div className="colors">
-                        <p>Colors</p>
-                        <label htmlFor="red" className="red"></label>
-                        <input type="radio" htmlFor="red" id="red" className="red"/>
-                        <input type="radio" id="blue" />
-                        <input type="radio" id="green" />
-                        <input type="radio" id="black" />
+                    <hr className='separator' />
+                    <div className="miniCont _color">
+                        <p>Colors :</p>
+                        <button id="red"></button>
+                        <button id='blue' ></button>
+                        <button id="green"></button>
                     </div>
-                    <div className="sizes">
-                        <p>Size:</p>
-                        <select name="size" id="size">
-                            <option value="s">S</option>
-                            <option value="m">M</option>
-                            <option value="l">L</option>
-                            <option value="xl">XL</option>
-                        </select>
+                    <div className="miniCont _size">
+                        <p>Size :</p>
+                        <div className='sizeChoice'>s</div>
+                        <div className='sizeChoice'>m</div>
+                        <div className='sizeChoice'>l</div>
+                        <div className='sizeChoice'>xl</div>
+                        <div className='sizeChoice'>xxl</div>
                     </div>
                     <div className="miniCont">
                         <div className="quantity">
-                            <p>Quantity:</p>
-                            <input type="number" min="1" max="10" defaultValue="1" />
+                            <button id='minus'>-</button>
+                            <div><p>5</p></div>
+                            <button id='plus'>+</button>
                         </div>
                         <div className="favorites">
                             <FaRegHeart size="1.5em"/>
                         </div>
                     </div>
-                    <div className='miniCont'>
+                    <div className='miniCont _btnCont'>
                         <button className="addToCart">Add to Cart</button>
                         <button className="buyNow">Buy Now</button>
                     </div>

@@ -2,6 +2,7 @@ import React from 'react'
 import { FaCartShopping } from "react-icons/fa6"
 import { FaRegHeart } from "react-icons/fa"
 import { CgProfile } from "react-icons/cg"
+import { Outlet } from 'react-router-dom'
 
 function NavBar1() {
 
@@ -35,8 +36,9 @@ function NavBar1() {
           </div>
         </div>
       </div>
-      
+    <Outlet />
     </div>
+  
   )
 }
 

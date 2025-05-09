@@ -8,8 +8,7 @@ import favoritesRoute from './routes/favoritesRoute.js';
 const app = express();
 app.use(express.json());
 dotenv.config();
-const PORT = process.env.PORT ;
-
+const PORT = process.env.PORT || 2103 ;
 
 async function connectDB() {
     try {
@@ -29,11 +28,10 @@ connectDB().then(() => {
 }).catch((error) => {
     console.error("Error connecting to the database:", error);
 });
-
+console.log(process.env);
 console.log("kulchi khdam");
 app.listen(PORT, () => {console.log(`Server is running on port ${PORT}`);});
 
 app.use('/products', productRoute);
 app.use('/cart',cartRoute);
 app.use('/favorites',favoritesRoute);
-

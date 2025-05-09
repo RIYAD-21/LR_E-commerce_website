@@ -22,8 +22,10 @@ export const getProduct = async (req, res) => {
         if (result.length === 0) {
             return res.status(404).json({ success: false , message: "No products found" });
         }
+        console.log("Product found:", result[0]);
         res.status(200).json({success: true, data: result[0]});
     } catch (error) {
+        console.error("Error fetching product:", error);
         res.status(500).json({ success: false, message: "Internal server error" });
     }
 }

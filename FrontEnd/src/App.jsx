@@ -7,6 +7,7 @@ import LogIn from "./components/registrationForm/LogIn.jsx"
 import Register from "./components/registrationForm/Register.jsx"
 import NavBar2 from "./components/productDetail/NavBar2.jsx"
 import ProductView from "./components/productDetail/productView.jsx"
+import CheckOut from "./components/checkOut&Payment/checkOut.jsx"
 import ProductsContainer from "./components/productsCont/productsContainer.jsx"
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
@@ -23,6 +24,7 @@ function App() {
               {/* <Footer /> */}
             </>
             }>
+            <Route path="check" element={<CheckOut/>}></Route>
             <Route path="ads" element={<AdsSpace />}></Route>
             <Route path="home" element={<HomePage />} />
             <Route path="productContainer" element={<ProductContainer />} />

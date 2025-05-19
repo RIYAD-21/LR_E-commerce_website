@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaSearch } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
+import AdsSpace from "../components/homePageComp/AdsSpace.jsx"
 
 export default function HomePage() {
     return (
@@ -25,7 +26,10 @@ export default function HomePage() {
                         <img src="/cart-sales-photo.png" alt="cart" />
                     </div>
                 </div>
+                <AdsSpace />
+                
             </div>
+            
         </>
     )
 }

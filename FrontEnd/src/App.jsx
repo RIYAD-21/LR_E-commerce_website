@@ -1,12 +1,12 @@
-import NavBar1 from "./pages/homePageComp/NavBar1.jsx"
-import HomePage from "./pages/homePageComp/HomePage.jsx"
-import ProductContainer from "./pages/productContainer.jsx"
-import Footer from "./pages/footer.jsx"
-import AdsSpace from "./pages/homePageComp/AdsSpace.jsx"
-import LogIn from "./pages/registrationForm/LogIn.jsx"
-import Register from "./pages/registrationForm/Register.jsx"
-import NavBar2 from "./pages/productDetail/NavBar2.jsx"
-import ProductView from "./pages/productDetail/productView.jsx"
+import NavBar1 from "./components/homePageComp/NavBar1.jsx"
+import HomePage from "./pages/HomePage.jsx"
+import ProductContainer from "./components/productContainer.jsx"
+import Footer from "./components/footer.jsx"
+import AdsSpace from "./components/homePageComp/AdsSpace.jsx"
+import LogIn from "./components/registrationForm/LogIn.jsx"
+import Register from "./components/registrationForm/Register.jsx"
+import NavBar2 from "./components/productDetail/NavBar2.jsx"
+import ProductView from "./components/productDetail/productView.jsx"
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
@@ -16,13 +16,13 @@ function App() {
     <>
       <Router>
         <Routes>
-          <Route path="/footer" element={<Footer />}></Route>
           <Route path="/" element={
             <>
               <NavBar1 />
-              <Footer />
+              {/* <Footer /> */}
             </>
             }>
+            <Route path="ads" element={<AdsSpace />}></Route>
             <Route path="home" element={<HomePage />} />
             <Route path="productContainer" element={<ProductContainer />} />
             <Route path="adsSpace" element={<AdsSpace />} />

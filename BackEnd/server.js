@@ -28,7 +28,6 @@ connectDB().then(() => {
 }).catch((error) => {
     console.error("Error connecting to the database:", error);
 });
-console.log(process.env);
 console.log("kulchi khdam");
 app.listen(PORT, () => {console.log(`Server is running on port ${PORT}`);});
 

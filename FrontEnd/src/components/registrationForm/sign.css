@@ -4,7 +4,7 @@ body{
     margin: 0;
     font-family: 'Poppins', sans-serif;
 }
-.container{
+.sign_container{
     display: flex;
     height: 100vh;
 }
@@ -99,7 +99,7 @@ body{
     background-color: rgba(244, 117, 88, 0.74);
 }
 .logIn_image{
-    height: 100vh;
+    height: 95vh;
     display: flex;
     justify-content: center;
     align-items: center;

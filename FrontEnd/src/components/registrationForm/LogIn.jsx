@@ -3,7 +3,7 @@ import './sign.css';
 
 export default function LogIn() {
     return (
-        <div className="container">
+        <div className="sign_container">
             <div className="logIn_side1">
                 <div className="_form">
                     <h6>Welcome back !!!</h6>

@@ -2,7 +2,7 @@
 export default function Register() {
     return(
         <>
-            <div className="container">
+            <div className="sign_container">
                 
                 <div className="registration_side2">
                     <div className="registration_image">

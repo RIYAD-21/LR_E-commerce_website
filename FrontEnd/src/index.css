@@ -208,7 +208,7 @@ body{
 /*Products container*/
 .product-detail{
   font-family: 'Poppins', sans-serif;
-  margin:100px;
+  margin:1vh;
   width:30vh;
   height:40vh;
   display: grid;

@@ -1,0 +1,32 @@
+.compAds_cont{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 4vh;
+}
+.comp_cont{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1.5vh;
+    background-color: rgb(255, 255, 255);
+    min-width: auto;
+    max-width: 133vh;
+    padding: 1vh;
+    border-radius: 2vh;
+}
+.comp_mini_cont{
+    background-color: rgb(217, 217, 217);
+    width: 25vh;
+    height: 40vh;
+    border: 1px solid black;
+    border-radius: 2.5vh;
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+.comp_mini_cont:hover{
+    background-color: aliceblue;
+}

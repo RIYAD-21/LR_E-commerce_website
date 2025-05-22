@@ -9,6 +9,8 @@ import NavBar2 from "./components/productDetail/NavBar2.jsx"
 import ProductView from "./components/productDetail/productView.jsx"
 import CheckOut from "./components/checkOut&Payment/checkOut.jsx"
 import ProductsContainer from "./components/productsCont/productsContainer.jsx"
+import Cart from "./components/cart/cart.jsx"
+import CompaniesAds from "./components/homePageComp/companiesAds.jsx"
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
@@ -18,6 +20,8 @@ function App() {
     <>
       <Router>
         <Routes>
+          <Route path="login" element={<LogIn />} />
+          <Route path="register" element={<Register />} />
           <Route path="/" element={
             <>
               <NavBar1 />
@@ -30,10 +34,10 @@ function App() {
             <Route path="productContainer" element={<ProductContainer />} />
             <Route path="productsCont" element={<ProductsContainer />} ></Route>
             <Route path="adsSpace" element={<AdsSpace />} />
-            <Route path="login" element={<LogIn />} />
-            <Route path="register" element={<Register />} />
             <Route path="navBar2" element={<NavBar2 />} />
             <Route path="productView" element={<ProductView />} />
+            <Route path="cart" element={<Cart />}></Route>
+            <Route path="comp" element={<CompaniesAds />}></Route> 
           </Route>
         </Routes> 
       </Router>

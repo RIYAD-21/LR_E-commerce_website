@@ -73,7 +73,31 @@ body{
   display: flex;
   align-items: center;
   margin: 15px;
-  gap:5px;
+}
+.navBar1__menu__item div{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 10vh;
+  height: 5vh;
+  border-radius: 5vh;
+  background-color: rgb(255, 222, 215);
+  font-size: 1.8vh;
+  font-weight: 600;
+}
+.btns{
+  background-color: rgb(255, 222, 215);
+  border-radius: 5vh;
+}
+.btns div a{
+  text-decoration: none;
+  color:#292929;
+}
+.navBar1__menu__item div[id='login']{
+  background-color: rgba(244, 116, 88, 1);
+}
+.navBar1__menu__item div[id='login'] a{
+  color: aliceblue;
 }
 .searchBar{
   /* background-color: rgba(249, 120, 0, 1); */
@@ -85,13 +109,15 @@ body{
   top: 8.5vh; */
 }
 .searchBar__input{
-  width: 90vh;
+  width: 100vh;
+  height: 5vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
   background-color: rgb(255, 255, 255);
   border-radius: 50px;
-  padding: 5px;
+  border: 1px solid #000000;
+  padding: 0.5vh;
 }
 .searchBar__input input{
   width:90%;
@@ -110,7 +136,7 @@ body{
   cursor: pointer;
 }
 .firstCont {
-  background-image: url('/public/orangeBG.jpg');
+  background-image: url('/orangeBG.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -163,47 +189,37 @@ body{
 
 /*Ads Space*/
 .ads-Space_cont{
-  margin: 10px;
+  position: relative;
   display: flex;
+  flex-direction: row;
+  justify-content: space-around;
   align-items: center;
-  justify-content: center;
-  max-width: 100%;
-  height: 70vh;
-  background-color: #000000;
-  opacity: 50%;
+  width: 80vh;
+  height:80vh;
+  background-color: #7a7a7a;
 }
-.ads-Space_cont div{
-  width:80%;
-  height: 100%;
+/* .ads-Space_cont div{
+  width: 50vh;
+  height: 50vh;
+} */
+.ads-Space_cont div img{
+  max-width: 40vh;
+  max-height: 40vh;
+  object-fit: cover;
 }
 .ads-Space_cont div[id="center"]{
-    z-index: 2;
-    background-color: #610000;
-    opacity: 58%;
-}
-.ads-Space_cont div[id="center"] img{
-  width: 80vh;
-  height: 100%;
+  position: absolute;
+  top: 30vh;
+  z-index: 1;
 }
 .ads-Space_cont div[id="1"]{
-  z-index: -1;
-  background-color: #a10000;
-}
-.ads-Space_cont div[id="1"] img{
-  width: 100%;
-  height: 100%;
+  opacity: 50%;
 }
 .ads-Space_cont div[id="2"]{
-   z-index: -1;
-  background-color: #810000;
-}
-.ads-Space_cont div[id="2"] img{
-  width: 100%;
-  height: 100%;
+  opacity: 50%;
 }
 .ads-Space_cont button{
-  background-color: #610000;
-  width: 30vh;
+  cursor: pointer;
 }
 /*Products container*/
 .product-detail{

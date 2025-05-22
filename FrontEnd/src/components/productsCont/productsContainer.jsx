@@ -6,7 +6,7 @@ export default function ProductsContainer() {
         <div id="global">
             <div className='products_container'>
                 <div className='mini_bar'>
-                    <h2>Top Categories</h2>
+                    <h2>Most Liked</h2>
                     <div className='scroll_buttons'>
                         <button id="left">&#8592;</button>
                         <button id="right">&#8594;</button>

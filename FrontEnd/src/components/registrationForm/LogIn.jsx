@@ -1,4 +1,5 @@
 import React from 'react';
+import Register from "../registrationForm/Register.jsx"
 import './sign.css'; 
 
 export default function LogIn() {
@@ -15,7 +16,7 @@ export default function LogIn() {
                         <input type="password" placeholder="" required />
                         <button type="submit">Log In &rarr;</button>
                     </form>
-                    <p>Don't have an account? <a href="/register">Register</a></p>
+                    <p>Don't have an account? <a href="/Register">Register</a></p>
                 </div>
             </div>
             <div className="logIn_side2">

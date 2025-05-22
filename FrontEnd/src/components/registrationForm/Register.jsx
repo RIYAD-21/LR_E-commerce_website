@@ -1,3 +1,4 @@
+import LogIn from "../registrationForm/LogIn.jsx"
 
 export default function Register() {
     return(
@@ -24,7 +25,7 @@ export default function Register() {
                             <input type="password" placeholder="" required />
                             <button type="submit">Register &rarr;</button>
                         </form>
-                        <p>Already have an account? <a href="/login">Log In</a></p>
+                        <p>Already have an account? <a href="LogIn">Log In</a></p>
                     </div>
                 </div>
             </div>

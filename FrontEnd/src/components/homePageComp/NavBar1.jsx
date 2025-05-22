@@ -3,15 +3,21 @@ import { FaCartShopping } from "react-icons/fa6"
 import { FaRegHeart } from "react-icons/fa"
 import { CgProfile } from "react-icons/cg"
 import { Outlet } from 'react-router-dom'
-
+import { FaSearch } from "react-icons/fa";
+import LogIn from "../registrationForm/LogIn.jsx"
+import Register from "../registrationForm/Register.jsx"
 function NavBar1() {
 
   return (
+    
     <div className="navBar1__container">
       <div className="navBar1">
         <div className="navBar1_logo">
           <img src="/logo.png" alt="Logo LR E-commerce" />
-          <p>LR E-commerce website <br /> Shop, Buy and Enjoy</p>
+          <div className="searchBar__input">
+            <input type="text" placeholder="what are you loking for ?" />
+            <button><FaSearch size="1.2em" color="white"/></button>
+          </div>
         </div>
         <div className="navBar1__menu">
           <div className="FCL_info">
@@ -22,17 +28,15 @@ function NavBar1() {
             </span>
           </div>
           <div className="navBar1__menu__item">
-            <FaCartShopping size="2em"/>
-            <p>Cart</p>
+            <a href="cart"><FaCartShopping size="2em" color='black'/></a>
           </div>
           <div className="navBar1__menu__item">
-            <FaRegHeart size="2em" color="red"/>
-            <p>Favorites</p>
+            <a href="favorites"><FaRegHeart size="2em" color="red"/></a>
+            
           </div>
-          <div className="navBar1__menu__item">
-            <CgProfile size="2.7em">
-            </CgProfile>
-            <p>LogIn / Register</p>
+          <div className="navBar1__menu__item btns">
+            <div id='login'><a href="LogIn">Login</a></div>
+            <div><a href="Register">Register</a></div>
           </div>
         </div>
       </div>

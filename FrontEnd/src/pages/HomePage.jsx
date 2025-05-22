@@ -1,7 +1,8 @@
 import React from 'react';
-import { FaSearch } from "react-icons/fa";
 import { IoMenu } from "react-icons/io5";
 import AdsSpace from "../components/homePageComp/AdsSpace.jsx"
+import ProductsContainer from "../components/productsCont/productsContainer.jsx"
+import CompaniesAds from '../components/homePageComp/companiesAds.jsx';
 
 export default function HomePage() {
     return (
@@ -12,10 +13,7 @@ export default function HomePage() {
                         <div className="searchBar__categories">
                             <IoMenu size="2.5em" color="white"/>
                         </div>  
-                        <div className="searchBar__input">
-                            <input type="text" placeholder="what are you loking for ?" />
-                            <button><FaSearch size="1.2em" color="white"/></button>
-                        </div>
+                        
                     </div>
                     <div className="info">
                         <span>
@@ -26,8 +24,9 @@ export default function HomePage() {
                         <img src="/cart-sales-photo.png" alt="cart" />
                     </div>
                 </div>
-                <AdsSpace />
-                
+                {/* <AdsSpace /> */}
+                <ProductsContainer></ProductsContainer>
+                <CompaniesAds></CompaniesAds>
             </div>
             
         </>

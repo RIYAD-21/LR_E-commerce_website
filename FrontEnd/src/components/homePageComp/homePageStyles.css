@@ -1,10 +1,9 @@
 .compAds_cont{
-    height: 100vh;
     display: flex;
+    height: 100vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 4vh;
 }
 .comp_cont{
     display: flex;
@@ -14,19 +13,39 @@
     gap: 1.5vh;
     background-color: rgb(255, 255, 255);
     min-width: auto;
-    max-width: 133vh;
+    max-width: 158vh;
     padding: 1vh;
     border-radius: 2vh;
 }
 .comp_mini_cont{
     background-color: rgb(217, 217, 217);
-    width: 25vh;
-    height: 40vh;
-    border: 1px solid black;
+    width: 30vh;
+    height: 45vh;
     border-radius: 2.5vh;
     cursor: pointer;
     transition: all ease 0.3s;
 }
 .comp_mini_cont:hover{
     background-color: aliceblue;
+}
+.seller_cont{
+    background-color: aliceblue;
+    width: 85%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.seller_cont div{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.seller_cont div a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50vh;
+    height: 7vh;
+    background-color: aquamarine;
 }

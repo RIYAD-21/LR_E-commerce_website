@@ -14,16 +14,14 @@ div[id='global']{
     margin: 3vh 0;
 }
 .mini_bar{
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    /* gap: 70vh; */
     align-items: center;
     padding: 0.5vh;
-    border-bottom: 1px solid rgb(61, 61, 61);
 }
 .scroll_buttons{
-    width: 30vh;
-    height: 10vh;
+    margin-right: 4vh;
     display: flex;
     gap: 1vh;
     align-items: center;
@@ -43,7 +41,6 @@ div[id='global']{
     box-shadow: 0 0 5px #3d3d3d, 0 0 5px #888888;
 }
 .products_view{
-    margin-top: 1vh;
     display: flex;
     justify-content: center;
     gap: 1.5vh;

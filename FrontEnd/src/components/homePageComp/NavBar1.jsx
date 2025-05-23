@@ -1,5 +1,5 @@
 import React from 'react'
-import { FaCartShopping } from "react-icons/fa6"
+import { FiShoppingCart } from "react-icons/fi";
 import { FaRegHeart } from "react-icons/fa"
 import { CgProfile } from "react-icons/cg"
 import { Outlet } from 'react-router-dom'
@@ -13,7 +13,7 @@ function NavBar1() {
     <div className="navBar1__container">
       <div className="navBar1">
         <div className="navBar1_logo">
-          <img src="/logo.png" alt="Logo LR E-commerce" />
+          <a href="home"><img src="/logo.png" alt="Logo LR E-commerce" /></a>
           <div className="searchBar__input">
             <input type="text" placeholder="what are you loking for ?" />
             <button><FaSearch size="1.2em" color="white"/></button>
@@ -28,10 +28,16 @@ function NavBar1() {
             </span>
           </div>
           <div className="navBar1__menu__item">
-            <a href="cart"><FaCartShopping size="2em" color='black'/></a>
+            <a href="cart">
+              <FiShoppingCart size="2em" color='black'/>
+              <div className="counter">0</div>
+            </a>
           </div>
           <div className="navBar1__menu__item">
-            <a href="favorites"><FaRegHeart size="2em" color="red"/></a>
+            <a href="favorites">
+              <FaRegHeart size="2em" color="black"/>
+              <div className="counter">0</div>
+            </a>
             
           </div>
           <div className="navBar1__menu__item btns">

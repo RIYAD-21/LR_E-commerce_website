@@ -3,6 +3,8 @@ import { IoMenu } from "react-icons/io5";
 import AdsSpace from "../components/homePageComp/AdsSpace.jsx"
 import ProductsContainer from "../components/productsCont/productsContainer.jsx"
 import CompaniesAds from '../components/homePageComp/companiesAds.jsx';
+import Footer from "../components/footer.jsx"
+
 
 export default function HomePage() {
     return (
@@ -18,15 +20,24 @@ export default function HomePage() {
                     <div className="info">
                         <span>
                             <h1>Shop, Buy and Enjoy</h1>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. <br /> Quisquam, voluptatibus.</p>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/> Quisquam, voluptatibus.</p>
                             <button className="btn">Shop Now</button>
                         </span>
                         <img src="/cart-sales-photo.png" alt="cart" />
                     </div>
                 </div>
                 {/* <AdsSpace /> */}
-                <ProductsContainer></ProductsContainer>
-                <CompaniesAds></CompaniesAds>
+                <div className='cont_margin'>
+                    <ProductsContainer name="New features" />
+                </div>
+                <div className='cont_margin'>
+                    <CompaniesAds />
+                </div>
+                <div className='cont_margin'>
+                    <ProductsContainer name="Most Liked" />
+                </div>
+                
+                {/* <Footer></Footer> */}
             </div>
             
         </>

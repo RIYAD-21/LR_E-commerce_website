@@ -1,0 +1,94 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+.sideBar {
+    width: 20%;
+    height: 100%;
+    background-color: #b1b1b1;
+    position: fixed;
+    color: black;
+}
+.sideBar ul {
+    width:auto;
+    list-style-type: none;
+    padding: 5vh 2vh;
+}
+.sideBar ul li {
+    background-color: #d1d1d1;
+    margin:0 2vh;
+    padding: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+.sideBar ul li.selected {
+    background-color: #4d4d4d;
+    color: white;
+}
+.sideBar ul li a {
+    text-decoration: none;
+    color: default;
+    display: block;
+    
+}
+.content {
+    margin-left: 20%;
+    padding: 1px;
+    background-color: #f0f0f0;
+    height: 100vh;
+}
+.clientProfile {
+    color: black;
+    background-color: #f0f0f0;
+    padding: 1px 20px;
+    height: 100vh;
+    width: 90%;
+}
+.clientProfile h2 {
+    text-align: left;
+    color: #333;
+    padding-left: 5vh;
+}
+.profileDetails {
+    width: 90%;
+    margin: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+.profileDetails table {
+    width: 100%;
+    border-collapse: collapse;
+    color: #4d4d4d;
+
+}
+.profileDetails th, .profileDetails td {
+    padding: 12px 20px;
+    border: 1px solid #dddddd;
+    text-align: left;
+}
+.profileDetails th {
+    background-color: #f2f2f2;
+    font-size: 15px;
+}
+.profileDetails td {
+    font-size: 12px;
+}
+.profileDetails button {
+    background-color: #4d4d4d;
+    color: white;
+    border: none;
+    width: 10%;
+    height: 5vh;
+    padding: 10px 10px;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 5px;
+    margin: 10px 0 0 0;
+    transition: all 0.3s ease;
+}
+.profileDetails button:hover {
+    background-color: #828282;
+    box-shadow:  0 4px 8px rgba(255, 255, 255, 0.881);
+}

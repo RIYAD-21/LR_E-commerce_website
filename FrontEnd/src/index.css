@@ -5,19 +5,36 @@ body{
   padding: 0;
   font-family: 'Poppins', sans-serif;
   background-color: rgb(245, 245, 245);
+  position: relative;
 }
 .cont_margin{
-  margin: 20vh 0;
+  margin: 5vh 0;
+}
+@keyframes appear{
+  from{
+    opacity: 0;
+    scale:0.4 ;
+  }
+  to{
+    opacity: 1;
+    scale: 1;
+  }
+}
+.block_animat{
+  animation: appear linear ;
+  animation-timeline: view();
+  animation-range: entry 0 cover 30%;
 }
 /* Style sheet of the navigation bar beafore login */
-
 .navBar1__container{
-  position: sticky;
-  top: 0;
-  z-index: 1;
   font-family:'Poppins';
+  width: 100%;
+  
 }
 .navBar1{
+  position: sticky;
+  top: 0px;
+  z-index: 100;
   background-color: rgb(255, 255, 255);
   color: #000000;
   max-width: 100%;
@@ -122,14 +139,22 @@ body{
   text-align: center;
   text-decoration: none;
 }
+.profile{
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+}
+.profile p{
+  font-size: 1.7vh;
+  letter-spacing: 1px;
+  font-weight: 500;
+}
 .searchBar{
   /* background-color: rgba(249, 120, 0, 1); */
   display: flex;
   align-items: center;
   padding: 2.5vh;
   gap:25%;
-  /* position: sticky;
-  top: 8.5vh; */
 }
 .searchBar__input{
   width: 100vh;
@@ -209,7 +234,35 @@ body{
 .firstCont .info span button:hover{
   box-shadow: 0 0 10px #d7c600, 0 0 20px #e1ff00;
 }
+.profile_select{
+  position: fixed;
+  display: none;
+  flex-direction: column;
+  background-color: #ffffff;
+  width: 20vh;
+  height: 22vh;
+  right: 3vh;
+  bottom: 68vh;
+  z-index: 100;
+  gap: 3px;
+  box-shadow:0 0 10px #292929;
+  border-radius: 6px;
+}
+.profile_select a{
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 2vh;
+  padding: 1vh;
+  gap: 1vh;
+  color: rgb(44, 44, 44);
+  transition: all ease 0.3s;
 
+}
+.profile_select a:hover{
+  box-shadow: 0 0 5px #7a7a7a;
+  background-color: rgb(244, 244, 244);
+}
 /*Ads Space*/
 .ads-Space_cont{
   position: relative;

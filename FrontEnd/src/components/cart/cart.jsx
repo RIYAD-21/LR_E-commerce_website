@@ -3,7 +3,7 @@ import  "./cartStyles.css";
 // import check from "../checkOut&Payment/checkOut.jsx";
 import React,{useState,useEffect} from "react";
 
-function Card(){
+function Cart(){
     const [Total, setTotal] = useState(0);
     const [Quantity,setQuantity] = useState(1);
 
@@ -69,4 +69,4 @@ function Card(){
 
 }
 
-export default Card;
+export default Cart;

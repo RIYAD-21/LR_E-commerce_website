@@ -9,13 +9,13 @@ export default function AdsSpace() {
             document.getElementById("1").innerHTML=images[Index].innerHTML;
             document.getElementById("center").innerHTML=images[Index+1].innerHTML;
             document.getElementById("2").innerHTML=images[Index-1].innerHTML;
-            setIndex(() => {(Index+1 )% images.length});
+            setIndex(() => {Index = Index + 1 < images.length ? Index + 1 : Index;});
         }
         if(e==='right'){
             document.getElementById("2").innerHTML=images[Index].innerHTML
             document.getElementById("center").innerHTML=images[Index-1].innerHTML;
             document.getElementById("1").innerHTML=images[Index+1].innerHTML;
-            setIndex(() => {(Index-1 )% images.length});
+            setIndex(() => {Index = Index - 1 < images.length ? Index - 1 : Index;});
         }
     }
     return (

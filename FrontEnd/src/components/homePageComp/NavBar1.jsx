@@ -4,8 +4,6 @@ import { FaRegHeart } from "react-icons/fa"
 import { CgProfile } from "react-icons/cg"
 import { Outlet } from 'react-router-dom'
 import { FaSearch } from "react-icons/fa";
-import LogIn from "../registrationForm/LogIn.jsx"
-import Register from "../registrationForm/Register.jsx"
 function NavBar1() {
 
   return (

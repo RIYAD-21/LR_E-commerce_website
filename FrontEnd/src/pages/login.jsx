@@ -1,6 +1,6 @@
+import '../components/registrationForm/sign.css'; 
+import Register from "./register.jsx";
 import React from 'react';
-import Register from "../registrationForm/Register.jsx"
-import './sign.css'; 
 
 export default function LogIn() {
     return (

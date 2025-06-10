@@ -32,6 +32,10 @@ body{
 ._form form label{
     font-size:1.8vh;
     margin-top: 10px;
+    color: black;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family: poppins, sans-serif;
 }
 ._form h1{
     font-size: 5vh;

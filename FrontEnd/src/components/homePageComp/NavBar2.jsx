@@ -40,19 +40,19 @@ function NavBar2() {
           </div>
           <div className="navBar1__menu__item">
             <a href="cart">
-              <FiShoppingCart size="2em" color='black'/>
+              <FiShoppingCart size="1.75em" color='black'/>
               <div className="counter">0</div>
             </a>
           </div>
           <div className="navBar1__menu__item">
             <a href="favorites">
-              <FaRegHeart size="2em" color="black"/>
+              <FaRegHeart size="1.7em" color="black"/>
               <div className="counter">0</div>
             </a>
             
           </div>
           <div className="navBar1__menu__item profile" id='1'>
-            <CgProfile size="2em" />
+            <CgProfile size="1.7em" />
             <p>Welcome,User</p>
           </div>
         </div>

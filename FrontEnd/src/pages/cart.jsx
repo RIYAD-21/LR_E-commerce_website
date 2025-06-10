@@ -1,17 +1,10 @@
 import computer from "/pshand1.png";
 import  "./cartStyles.css";
+import cartItem from "../components/cart/cartItem.jsx"
 // import check from "../checkOut&Payment/checkOut.jsx";
 import React,{useState,useEffect} from "react";
 
 function Cart(){
-    const [Total, setTotal] = useState(0);
-    const [Quantity,setQuantity] = useState(1);
-
-    useEffect(() => {
-        let i = 0;
-        product.map(product =>  i+= product.price)
-        setTotal(i)
-    })
     
 
     const removeHandler = (i) => {
@@ -40,17 +33,11 @@ function Cart(){
             <h2 className="card-title">Cart</h2>
             {product.map(product=>
                 <div className="card-item" id={product.id}>
-                    <img src={product.image} alt={product.name} className="product-image"/>
-                    <p>{product.name}</p>
-                    <button>-</button>
-                    <p>{product.quantity}</p>
-                    <button>+</button>
-                    <p>{product.price}$</p>
-                    <button onClick={() => {removeHandler(product.id)}}>🗑️</button>
+                    <cartItem product={product}></cartItem>
                 </div>
             )}
             <input type="text" placeholder="Enter coupon code"/>
-            <button className="cart_btn">
+            <button className="cart_btn" >
                 Apply
             </button>
             <div>

@@ -1,4 +1,5 @@
-import ProductContainer from '../productContainer.jsx'
+import ProductCard from '../productCard.jsx'
+import React from 'react'
 import './productsCont.css'
 
 export default function ProductsContainer(props) {
@@ -13,11 +14,11 @@ export default function ProductsContainer(props) {
                     </div>
                 </div>
                 <div className='products_view'>
-                    <ProductContainer />
-                    <ProductContainer />
-                    <ProductContainer />
-                    <ProductContainer />
-                    <ProductContainer />
+                    {/* <ProductCard  product={null} />
+                    <ProductCard  product={null} />
+                    <ProductCard  product={null} />
+                    <ProductCard  product={null} />
+                    <ProductCard  product={null} /> */}
                 </div>
             </div>
         </div>

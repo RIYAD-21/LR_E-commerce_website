@@ -1,6 +1,5 @@
 import React from 'react';
 import { IoMenu } from "react-icons/io5";
-import AdsSpace from "../components/homePageComp/AdsSpace.jsx"
 import ProductsContainer from "../components/productsCont/productsContainer.jsx"
 import CompaniesAds from '../components/homePageComp/companiesAds.jsx';
 import AdditInfo from '../components/homePageComp/additInfo.jsx';
@@ -44,7 +43,7 @@ export default function HomePage() {
                     <AdditInfo />
                 </div>
                 
-                {/* <Footer></Footer> */}
+                <Footer></Footer>
             </div>
             
         </>

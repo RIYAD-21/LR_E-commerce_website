@@ -5,8 +5,14 @@ import { CgProfile } from "react-icons/cg"
 import { IoLogOutOutline } from "react-icons/io5";
 import { Outlet } from 'react-router-dom'
 import { useEffect } from 'react';
+import { useProductStore } from '../../store/useProductStore';
+import { useState } from 'react';
 
 function NavBar2() {
+
+  const [searchTerm, setSearchTerm] = useState("");
+  const { fetchProductByName } = useProductStore();
+
   useEffect(()=>{
     const p = document.getElementById('1');
     const ps = document.getElementById("ps");
@@ -16,8 +22,13 @@ function NavBar2() {
     ps.addEventListener('mouseleave',()=>{
     ps.style.display="none";
     })
-  })
+  },[])
   
+  const handleSearch = () => {
+    if (searchTerm.trim() !== "") {
+      fetchProductByName(searchTerm);
+    }
+  };
   
   return (
     <>
@@ -26,8 +37,8 @@ function NavBar2() {
         <div className="navBar1_logo">
           <a href="home"><img src="/logo.png" alt="Logo LR E-commerce" /></a>
           <div className="searchBar__input">
-            <input type="text" placeholder="what are you loking for ?" />
-            <button><FaSearch size="1.2em" color="white"/></button>
+            <input type="text" placeholder="what are you loking for ?" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+            <button onClick={handleSearch}><FaSearch size="1.2em" color="white"/></button>
           </div>
         </div>
         <div className="navBar1__menu">

@@ -92,3 +92,46 @@ body{
     background-color: #828282;
     box-shadow:  0 4px 8px rgba(255, 255, 255, 0.881);
 }
+.account-form {
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    align-items: center;
+    min-width: 50%;
+    margin: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+.account-form label {
+    margin: 5px 0;
+    font-weight: bold;
+    font-size: 14px;
+    color: #6b6b6b;
+}
+.account-form input {
+    display: block;
+    width: 90vh;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #cccccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+.account-form button {
+    background-color: #4d4d4d;
+    color: white;
+    border: none;
+    width: 20%;
+    height: 5vh;
+    padding: 10px 10px;
+    cursor: pointer;
+    font-size: 17px;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: all 0.3s ease;
+}
+.account-form button:hover {
+    background-color: #828282;
+    box-shadow: 0 4px 8px rgba(100, 100, 100, 0.881);
+}

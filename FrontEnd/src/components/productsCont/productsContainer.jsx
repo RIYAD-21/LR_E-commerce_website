@@ -1,8 +1,11 @@
 import ProductCard from '../productCard.jsx'
 import React from 'react'
+import { useProductStore } from '../../store/useProductStore.jsx';
 import './productsCont.css'
 
 export default function ProductsContainer(props) {
+    const { products } = useProductStore();
+
     return(
         <div id="global">
             <div className='products_container'>
@@ -14,11 +17,9 @@ export default function ProductsContainer(props) {
                     </div>
                 </div>
                 <div className='products_view'>
-                    {/* <ProductCard  product={null} />
-                    <ProductCard  product={null} />
-                    <ProductCard  product={null} />
-                    <ProductCard  product={null} />
-                    <ProductCard  product={null} /> */}
+                    {products?.map((product) => (
+                        <ProductCard key={product.id} product={product} />
+                    ))}
                 </div>
             </div>
         </div>

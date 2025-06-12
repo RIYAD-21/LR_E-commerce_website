@@ -1,11 +1,12 @@
 import React from 'react';
 import { IoMenu } from "react-icons/io5";
+import SearchPage from './search.jsx';
 import ProductsContainer from "../components/productsCont/productsContainer.jsx"
 import CompaniesAds from '../components/homePageComp/companiesAds.jsx';
 import AdditInfo from '../components/homePageComp/additInfo.jsx';
 import ScrollBar from '../components/homePageComp/scrollBar.jsx';
 import Footer from "../components/footer.jsx"
-
+import { Link } from 'react-router-dom';
 
 export default function HomePage() {
     return (
@@ -22,7 +23,9 @@ export default function HomePage() {
                         <span>
                             <h1>Shop, Buy and Enjoy</h1>
                             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.<br/> Quisquam, voluptatibus.</p>
-                            <button className="btn">Shop Now</button>
+                            <Link to="/search">
+                                <button className="btn">Shop Now</button>
+                            </Link>
                         </span>
                         <img src="/cart-sales-photo.png" alt="cart" />
                     </div>

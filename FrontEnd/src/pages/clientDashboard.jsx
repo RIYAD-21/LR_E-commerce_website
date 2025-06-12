@@ -1,4 +1,4 @@
-import Cart from "../components/cart/cart.jsx";
+import Cart from "../pages/cart.jsx";
 import ProfileSideBar from "../components/clientProfil/profileSideBar";
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 

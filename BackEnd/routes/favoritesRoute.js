@@ -1,10 +1,10 @@
 import express from 'express';
-import { addToFavorites, getFavorites, removeFromFavorites } from '../controllers/favoritesController.js';
+import { addToFavorites, getFavorites, removeFromFavorites } from '../controllers/favorites.controller.js';
 
 const router = express.Router();
 
 router.get('/', getFavorites);
-router.post('/:user_id/:product_id', addToFavorites);
-router.delete('/:user_id/:product_id', removeFromFavorites);
+router.post('/add/:user_id/:product_id', addToFavorites);
+router.delete('/remove/:user_id/:product_id', removeFromFavorites);
 
 export default router;

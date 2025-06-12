@@ -267,3 +267,77 @@ body{
   color: white;
   border: white 1px solid;
 }
+.review-form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  margin-top: 2vh;
+  color: #000000;
+}
+.review-form form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  height: auto;
+  background-color: rgba(244, 116, 88, 1);
+  border-radius: 10px;
+  padding: 2vh;
+  color: #000000;
+}
+.review-form h3{
+  font-size: 3.5vh;
+  font-weight: 600;
+  margin-bottom: 2vh;
+  color: #ffffff;
+}
+.form-group{
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin-bottom: 2vh;
+}
+.form-group label{
+  font-size: 2.3vh;
+  margin-bottom: 0.5vh;
+  color: #000000;
+}
+.form-group select{
+  width: auto;
+  height: 5vh;
+  padding: 1vh;
+  font-size: 1.8vh;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+}
+.form-group textarea{
+  width: auto;
+  height: 20vh;
+  padding: 1vh;
+  font-size: 2.6vh;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: rgb(255, 255, 255);
+  resize: none;
+  overflow-y: scroll;
+}
+.review-form button{
+  width: 20%;
+  height: 8vh;
+  font-size: 2.2vh;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  background-color: rgb(255, 102, 0);
+  transition: all 0.3s ease-in-out;
+  border: none;
+}
+.review-form button:hover{
+  background-color: rgb(255, 102, 0);
+  color: white;
+  box-shadow: 0 0 5px rgb(255, 206, 155), 0 0 10px rgb(255, 206, 155);
+}

@@ -37,7 +37,7 @@ export default function ProductCard(props) {
             		<p id="Pbrand">{props.product.brand}</p>
 					<p id="Pprice">{props.product.price}$</p>
 					<div id="Pcateg"> 
-              			<span>Categorie</span>
+              			<span>{props.product.categorie}</span>	
             		</div>
 					<p id="Psales">14k reviews</p>
 					<div id="stars">⭐⭐⭐⭐⭐</div>

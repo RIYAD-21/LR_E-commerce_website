@@ -1,8 +1,6 @@
 import computer from "/pshand1.png";
-import  "./cartStyles.css";
-import cartItem from "../components/cart/cartItem.jsx"
-// import check from "../checkOut&Payment/checkOut.jsx";
-import React,{useState,useEffect} from "react";
+import cartItem from "../components/cart/cartItem.jsx";
+import '../components/cart/cartStyles.css';
 
 function Cart(){
     
@@ -41,13 +39,13 @@ function Cart(){
                 Apply
             </button>
             <div>
-                <div>Subtotal: {Total}$</div>
+                <div>Subtotal: total$</div>
                 <div>Shipping:</div>
                 <div>Coupon: </div>
             </div>
 
             <div className={"total"}>
-                Total: {Total}$
+                Total: total$
             </div>
             <a className="cart_btn check" href="check">Proceed To CheckOut</a>
 

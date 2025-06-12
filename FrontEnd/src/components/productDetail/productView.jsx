@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaRegHeart } from "react-icons/fa"
+import './productDetail.css';
 
 export default function ProductView(){
     return(

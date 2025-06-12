@@ -1,36 +1,45 @@
-import express from 'express';
-import dotenv from 'dotenv';
-import { PGSQL } from './config/db.js';
-import productRoute from './routes/productRoute.js';
-import cartRoute from './routes/cartRoute.js';
-import favoritesRoute from './routes/favoritesRoute.js';
+import routes from "./routes/index.js";
+import express from "express";
+import helmet from "helmet";
+import morgan from "morgan";
+import cors from "cors";
+import dotenv from "dotenv";
+import path from "path";
+
+dotenv.config();
 
 const app = express();
-app.use(express.json());
-dotenv.config();
-const PORT = process.env.PORT || 2103 ;
+const PORT = process.env.PORT || 3000;
+const __dirname = path.resolve();
 
-async function connectDB() {
-    try {
-        // await PGSQL `CREATE TABLE IF NOT EXISTS Product (id SERIAL PRIMARY KEY, name VARCHAR(100), price NUMERIC)`;
-        // await PGSQL `CREATE TABLE IF NOT EXISTS Client (user_id SERIAL PRIMARY KEY, user_name VARCHAR(100), email VARCHAR(100), password VARCHAR(100))`;
-        // await PGSQL ` CREATE TABLE IF NOT EXISTS Wish_list (  user_id INT, product_id INT,PRIMARY KEY (user_id, product_id),
-        //             FOREIGN KEY (user_id) REFERENCES Client(user_id),FOREIGN KEY (product_id) REFERENCES Product(product_id)) `;
-        // await PGSQL `CREATE TABLE IF NOT EXISTS Cart (user_id INT, product_id INT,PRIMARY KEY (user_id, product_id),
-        //             FOREIGN KEY (user_id) REFERENCES Client(user_id),FOREIGN KEY (product_id) REFERENCES Product(product_id))`;
-        await PGSQL `SELECT 1`;
-    } catch (error) {
-    }
+
+app.use(express.json());
+app.use(cors({
+  origin: process.env.CORS_ORIGIN || "*", // Allow all origins by default, can be restricted to specific domains
+  credentials: true, // Allow credentials (cookies, authorization headers, etc.) 
+    methods: ["GET", "POST", "PUT", "DELETE"],
+}));
+app.use(
+  helmet({
+    contentSecurityPolicy: false,
+  })
+); // helmet is a security middleware that helps you protect your app by setting various HTTP headers
+app.use(morgan("dev")); // log the requests
+
+
+app.use("/api", routes);
+
+
+if (process.env.NODE_ENV === "production") {
+  // server our react app
+  app.use(express.static(path.join(__dirname, "/FrontEnd/dist")));
+  app.use('/public', express.static(path.join(__dirname, '../FrontEnd/public')));
+
+  app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "../FrontEnd", "dist", "index.html"));
+  });
 }
 
-connectDB().then(() => {
-    console.log("Database connection established successfully.");
-}).catch((error) => {
-    console.error("Error connecting to the database:", error);
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
 });
-console.log("kulchi khdam");
-app.listen(PORT, () => {console.log(`Server is running on port ${PORT}`);});
-
-app.use('/products', productRoute);
-app.use('/cart',cartRoute);
-app.use('/favorites',favoritesRoute);

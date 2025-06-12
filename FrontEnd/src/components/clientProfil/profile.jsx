@@ -1,6 +1,6 @@
 import './clientProfil.css';
 
-export default function Profile() {
+export default function Profile({showSettings, setShowSettings , userData}) {
     return (
         <div className="clientProfile">
             <h2>Client Profile</h2>
@@ -9,27 +9,27 @@ export default function Profile() {
                 <table>
                     <tr>
                         <th>Full Name</th>
-                        <td>John</td>
+                        <td>{userData?.fullname}</td>
                     </tr>
                     <tr>
                         <th>UserName</th>
-                        <td>Doe</td>
+                        <td>{userData?.username}</td>
                     </tr>
                     <tr>
                         <th>Email</th>
-                        <td>john.doe@example.com</td>
+                        <td>{userData?.email}</td>
                     </tr>
                     <tr>
                         <th>Username</th>
-                        <td>johndoe</td>
+                        <td>{userData?.username}</td>
                     </tr>
                     <tr>
                         <th>Phone</th>
-                        <td>+123456789</td>
+                        <td>{userData?.phone}</td>
                     </tr>
                     <tr>
                         <th>Address</th>
-                        <td>123 Main St, Anytown, USA</td>
+                        <td>{userData?.address}</td>
                     </tr>
                     <tr>
                         <th>Password</th>
@@ -37,18 +37,18 @@ export default function Profile() {
                     </tr>
                     <tr>
                         <th>Date of Birth</th>
-                        <td>01/01/1990</td>
+                        <td>{userData?.dob}</td>
                     </tr>
                     <tr>
                         <th>City</th>
-                        <td>Anytown</td>
+                        <td>{userData?.city}</td>
                     </tr>
                     <tr>
                         <th>Country</th>
-                        <td>USA</td>
+                        <td>{userData?.country}</td>
                     </tr>
                 </table>
-                <button>Edit</button>
+                <button onClick={() => setShowSettings(!showSettings)}>Edit</button>
             </div>
         </div>
     );

@@ -1,21 +1,26 @@
-import React from 'react';
+
 import SideBar from '../components/afterLogIn/sideBar';
-import {useProduct} from '../context/productContext';
 import ProductCard from '../components/productCard.jsx';
+import { useProductStore } from '../store/useProductStore.jsx';
+import { useEffect } from 'react';
 
 export default function SearchPage(){
-    const { products } = useProduct();
-
+    const { products, loading, fetchProducts } = useProductStore();
+    useEffect(() => {
+    fetchProducts();
+  }, [fetchProducts]);
+    console.log(products);
     return (
         <div className="searchPage">
             <SideBar />
             <div className="searchResults">
                 <h1>Search Results</h1>
                 <div>
-                    {products.length > 0 ? (
-                        products.map((product) => (
-                            <div key={product.id} className="productCard">
-                                {/* <ProductCard product={product} /> */}
+                    
+                    {products?.length > 0 ? (
+                        products?.map((product) => (
+                            <div key={product?.id} className="productCard">
+                                <ProductCard key={product?.id} product={product} />
                             </div>
                         ))
                     ) : (

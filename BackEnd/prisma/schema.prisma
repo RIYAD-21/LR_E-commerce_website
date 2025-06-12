@@ -1,0 +1,106 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum PaymentMethod {
+  PAYSTACK
+  STRIPE
+}
+
+model Client {
+  user_id     Int       @id @default(autoincrement())
+  password    String?   @db.VarChar(200)
+  email       String    @unique @db.VarChar(100)
+  fullname    String    @db.VarChar(100)
+  username    String    @unique @db.VarChar(50)
+  roles       String[]  @default(["customer"])
+  address     String?   @db.VarChar(200)
+  city        String?   @db.VarChar(100)
+  state       String?   @db.VarChar(100)
+  country     String?   @db.VarChar(100)
+  created_at  DateTime? @default(now())
+  
+  cart        Cart[]
+  orders      Order[]
+  reviews     Review[]
+}
+
+model Cart {
+  id       Int         @id @default(autoincrement())
+  user_id  Int
+  user     Client      @relation(fields: [user_id], references: [user_id])
+  items    CartItem[]
+}
+
+model CartItem {
+  id         Int      @id @default(autoincrement())
+  cart_id    Int
+  product_id Int
+  quantity   Int
+  cart       Cart     @relation(fields: [cart_id], references: [id])
+  product    Product  @relation(fields: [product_id], references: [product_id])
+}
+
+model Product {
+  product_id   Int       @id @default(autoincrement())
+  name         String    @db.VarChar(100)
+  categorie    String    @db.VarChar(100)
+  price        Float
+  description  String
+  image_url    String?
+  
+  cartItems    CartItem[]
+  orderItems   OrderItem[]
+  reviews      Review[]
+}
+
+model Order {
+  order_id       Int          @id @default(autoincrement())
+  user_id        Int
+  status         String       @db.VarChar(20)
+  date           DateTime     @default(now())
+  amount         Float?
+  total          Int?
+  ref            String?      @db.VarChar(100)
+  payment_method PaymentMethod?
+  
+  user           Client      @relation(fields: [user_id], references: [user_id])
+  items          OrderItem[]
+}
+
+model OrderItem {
+  id         Int      @id @default(autoincrement())
+  order_id   Int
+  product_id Int
+  quantity   Int
+  order      Order    @relation(fields: [order_id], references: [order_id])
+  product    Product  @relation(fields: [product_id], references: [product_id])
+}
+
+model Review {
+  id         Int      @id @default(autoincrement())
+  product_id Int
+  user_id    Int
+  content    String
+  rating     Int
+  date       DateTime @default(now())
+  
+  product    Product  @relation(fields: [product_id], references: [product_id])
+  user       Client   @relation(fields: [user_id], references: [user_id])
+
+  @@unique([user_id, product_id])
+}
+
+model ResetToken {
+  id         Int       @id @default(autoincrement())
+  email      String
+  token      String
+  used       Boolean
+  expiration DateTime?
+}

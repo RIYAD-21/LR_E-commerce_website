@@ -28,7 +28,7 @@ export default function ProductCard(props) {
 
 		return(
 			<>
-				<div className="product-detail" id="21" >
+				<div className="product-detail">
 					<div className="product-image">
 						<img src={props.product.image_url} alt={props.product.name} />	
 						<button id="Favorites" onClick={handleAddToFavorites} ><span>♡</span></button>

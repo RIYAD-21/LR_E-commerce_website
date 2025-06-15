@@ -1,0 +1,88 @@
+.card {
+    max-width:100vh;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.card-title {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.card-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    border-radius: 15px;
+}
+
+
+.product-image {
+    width: 70px;
+    height: 60px;
+    border-radius: 0.5rem;
+}
+
+.card-item button {
+    border: none;
+    padding: 0.4rem 0.8rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+
+.card input {
+    width: 95%;
+    padding: 0.75rem;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+}
+.cart_btn {
+    align-self: center;
+    background-color: rgba(244, 116, 88, 1);
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    width: 95%;
+    margin: 1rem 0;
+    transition: all 0.3s ease;
+}
+
+.cart_btn:hover {
+    background-color: rgb(239, 93, 61);
+    box-shadow: 0px 0px 5px rgba(222, 41, 0, 0.866), 0px 0px 2px rgb(255, 47, 0);
+}
+.check{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vh;
+    height: 5vh;
+    text-decoration-line: none;
+}
+.check a{
+    text-decoration: none;
+    color: aliceblue;
+}
+.total {
+    text-align: right;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #111827;
+    padding-top: 0.5rem;
+}

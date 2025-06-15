@@ -28,7 +28,7 @@ export default function ProductCard(props) {
 
 		return(
 			<>
-				<div className="product-detail" id="21" >
+				<div className="product-detail">
 					<div className="product-image">
 						<img src={props.product.image_url} alt={props.product.name} />	
 						<button id="Favorites" onClick={handleAddToFavorites} ><span>♡</span></button>
@@ -37,7 +37,7 @@ export default function ProductCard(props) {
             		<p id="Pbrand">{props.product.brand}</p>
 					<p id="Pprice">{props.product.price}$</p>
 					<div id="Pcateg"> 
-              			<span>Categorie</span>
+              			<span>{props.product.categorie}</span>	
             		</div>
 					<p id="Psales">14k reviews</p>
 					<div id="stars">⭐⭐⭐⭐⭐</div>

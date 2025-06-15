@@ -8,7 +8,7 @@ const createOrder = async ({
   ref,
   paymentMethod,
 }) => {
-  const { rows: order } = await PGSQL.query(
+  const order = await PGSQL.query(
     "INSERT INTO orders(user_id, status, amount, total, ref, payment_method) VALUES($1, 'complete', $2, $3, $4, $5) returning *",
     [userId, amount, itemTotal, ref, paymentMethod]
   );
@@ -25,8 +25,8 @@ const createOrder = async ({
 };
 
 const getAllOrders = async ({ userId, limit, offset }) => {
-  const { rowCount } = await PGSQL.query(
-    "SELECT * from orders WHERE orders.user_id = $1",
+  const rowCount = await PGSQL.query(
+    "SELECT COUNT(*) FROM orders WHERE orders.user_id = $1",
     [userId]
   );
   const orders = await PGSQL.query(

@@ -8,7 +8,7 @@ const orders = import('./orderRoute.js')
 
 const router = express.Router();
 console.log("Loading routes...");
-router.use('/auth', (await auth).default);
+router.use('/Auth', (await auth).default);
 router.use('/user', (await user).default);
 router.use('/cart', (await cart).default);
 router.use('/favorites', (await favorites).default);

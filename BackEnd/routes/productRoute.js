@@ -11,13 +11,13 @@ import {
 
 const router = express.Router();
 
-// Define routes with specific patterns
+
 router.get("/", getAllProducts);
-router.get("/add/id/:id", getProductById); // Prefix with "id" to avoid conflicts
-router.get("/add/name/:name", getProductByName); // Prefix with "name"
-router.get("/add/category/:category", getProductByCategory); // Prefix with "category"
+router.get("/add/id", getProductById); 
+router.get("/add/name/:name", getProductByName); 
+router.get("/add/category/:category", getProductByCategory);
 router.post("/", createProduct);
-router.put("/update/id/:id", updateProduct); // Prefix with "id"
-router.delete("/remove/id/:id", deleteProduct); // Prefix with "id"
+router.put("/update/id/:id", updateProduct); 
+router.delete("/remove/id/:id", deleteProduct); 
 
 export default router;

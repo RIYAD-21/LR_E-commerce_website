@@ -1,9 +1,9 @@
 import { getUserProfile, updateUserProfile } from "../services/user.service.js";
 
 const getUserProfileController = async (req, res) => {
-    const { user_id } = req.params;
+
     try {
-        const userProfile = await getUserProfile({ user_id });
+        const userProfile = await getUserProfile(req.user.id);
         res.status(200).json({ success: true, data: userProfile });
     } catch (error) {
         res.status(500).json({ success: false, message: "Internal server error" });

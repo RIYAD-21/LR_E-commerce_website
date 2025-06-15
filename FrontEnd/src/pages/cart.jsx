@@ -1,5 +1,5 @@
 import computer from "/pshand1.png";
-import cartItem from "../components/cart/cartItem.jsx";
+import CartItem from "../components/cart/cartItem.jsx";
 import '../components/cart/cartStyles.css';
 
 function Cart(){
@@ -16,22 +16,23 @@ function Cart(){
         rating: 4,
         image: computer,
         quantity:1,
-    },
-    {
-        id:2,
-        name: "computer I7",
-        price: 600,
-        rating: 4,
-        image: computer,
-        quantity:1,
-    }]
+    // },
+    // {
+    //     id:2,
+    //     name: "computer I7",
+    //     price: 600,
+    //     rating: 4,
+    //     image: computer,
+    //     quantity:1,
+    // }
+}]
 
     return (
         <div className="card">
             <h2 className="card-title">Cart</h2>
             {product.map(product=>
                 <div className="card-item" id={product.id}>
-                    <cartItem product={product}></cartItem>
+                    <CartItem product={product}></CartItem>
                 </div>
             )}
             <input type="text" placeholder="Enter coupon code"/>

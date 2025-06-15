@@ -99,7 +99,6 @@ const products = [{
 ];
 
 async function main() {
-    await prisma.product.deleteMany({});
     console.log("Seeding products...");
         for (const product of products) {
             await prisma.product.create({

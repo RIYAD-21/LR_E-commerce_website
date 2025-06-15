@@ -3,7 +3,6 @@ import {PGSQL} from '../config/db.js';
 const getAllProducts = async () => {
     try {
         const products = await PGSQL.query('SELECT * FROM product');
-        console.log('Fetched products:', products);
         return products;
     } catch (error) {
         console.error('Error fetching products:', error);

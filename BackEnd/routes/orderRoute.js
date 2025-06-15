@@ -1,4 +1,5 @@
-import { getAllOrdersController, createOrderController , getOrderController} from "../controllers/order.controller";
+import { getAllOrdersController, createOrderController , getOrderController} from "../controllers/order.controller.js";
+import express from "express";
 
 const router = express.Router();
 

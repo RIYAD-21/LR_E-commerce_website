@@ -20,8 +20,17 @@ import AccountForm from "./components/clientProfil/accountForm.jsx"
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { Toaster } from "react-hot-toast"
+import { useUserStore } from "./store/useUserStore.jsx";
+import { useEffect } from "react"
 
 function App() {
+
+   const checkAuth = useUserStore((state) => state.checkAuth);
+   const {isAuthenticated} = useUserStore();
+
+  useEffect(() => {
+    checkAuth();
+  }, []);
 
   return (
     <>
@@ -32,7 +41,7 @@ function App() {
           <Route path="register" element={<Register />} />
           <Route path="/" element={
             <>
-              <NavBar2 />
+              {isAuthenticated?(<NavBar2 /> ):(<NavBar1 />)}
               {/* <Footer /> */}
             </>
             }>

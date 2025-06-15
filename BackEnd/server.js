@@ -15,7 +15,7 @@ const __dirname = path.resolve();
 
 app.use(express.json());
 app.use(cors({
-  origin: "http://localhost:5173", // allow requests from this origin
+  origin: "http://localhost:5173", 
   credentials: true, 
     methods: ["GET", "POST", "PUT", "DELETE"],
 }));
@@ -23,15 +23,14 @@ app.use(
   helmet({
     contentSecurityPolicy: false,
   })
-); // helmet is a security middleware that helps you protect your app by setting various HTTP headers
-app.use(morgan("dev")); // log the requests
+);
+app.use(morgan("dev")); 
 
 
 app.use("/api", routes);
 
 
 if (process.env.NODE_ENV === "production") {
-  // server our react app
   app.use(express.static(path.join(__dirname, "/FrontEnd/dist")));
   app.use('/public', express.static(path.join(__dirname, '../FrontEnd/public')));
 

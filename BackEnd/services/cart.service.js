@@ -63,7 +63,11 @@ const decreaseItemQuantity = async ({ cart_id, product_id }) => {
     "Select products.*, cart_item.quantity, round((products.price * cart_item.quantity)::numeric, 2) as subtotal from cart_item join products on cart_item.product_id = products.product_id where cart_item.cart_id = $1",
     [cart_id]
   );
+<<<<<<< HEAD
   return results;
+=======
+  return results.rows;
+>>>>>>> 79df1df67c2a94e284a832510697c36c25662ef9
 };
 
 const emptyCart = async (cartId) => {

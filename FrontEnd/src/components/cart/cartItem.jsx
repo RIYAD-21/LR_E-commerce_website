@@ -4,7 +4,7 @@ import './cartStyles.css'
 
 export default function CartItem({product}){
     
-    // const {increment,decrement,deleteFromCart} = useCartStore()
+    const {increment,decrement,deleteFromCart} = useCartStore()
      
     return(
         <>

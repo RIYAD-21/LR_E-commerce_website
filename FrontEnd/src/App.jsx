@@ -20,8 +20,11 @@ import AccountForm from "./components/clientProfil/accountForm.jsx"
 import React from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import { Toaster } from "react-hot-toast"
+<<<<<<< HEAD
 import { useUserStore } from "./store/useUserStore.jsx";
 import { useEffect } from "react"
+=======
+>>>>>>> 79df1df67c2a94e284a832510697c36c25662ef9
 
 function App() {
 

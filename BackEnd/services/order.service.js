@@ -8,7 +8,11 @@ const createOrder = async ({
   ref,
   paymentMethod,
 }) => {
+<<<<<<< HEAD
   const order = await PGSQL.query(
+=======
+  const { rows: order } = await PGSQL.query(
+>>>>>>> 79df1df67c2a94e284a832510697c36c25662ef9
     "INSERT INTO orders(user_id, status, amount, total, ref, payment_method) VALUES($1, 'complete', $2, $3, $4, $5) returning *",
     [userId, amount, itemTotal, ref, paymentMethod]
   );
@@ -25,8 +29,13 @@ const createOrder = async ({
 };
 
 const getAllOrders = async ({ userId, limit, offset }) => {
+<<<<<<< HEAD
   const rowCount = await PGSQL.query(
     "SELECT COUNT(*) FROM orders WHERE orders.user_id = $1",
+=======
+  const { rowCount } = await PGSQL.query(
+    "SELECT * from orders WHERE orders.user_id = $1",
+>>>>>>> 79df1df67c2a94e284a832510697c36c25662ef9
     [userId]
   );
   const orders = await PGSQL.query(
